@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Erik Smile</title>
+        <style>
+            html,body{
+                 padding:0;
+                 margin:0;
+                 width:100%;
+                 height:100%;
+                 font-size: 62.5%;
+                 font-family: 'Noto Sans', 'Segoe UI', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
+            }
+
+            .wrap {
+            	width: 100%;
+            	height: 100%;
+            	background-color: #67b374;
+            	text-align: center;
+            }
+
+            .erik:hover {
+            	opacity: 1;
+            	animation-play-state: running;
+            	transition: all 0.5s;
+            }
+
+            .erik {
+            	opacity: 0.5;
+            	width: 480px;
+            	height: 480px;
+            	background-image: url('images/avatar.jpg');
+            	background-size: 480px 8160px;
+            	background-repeat: no-repeat;
+            	animation-name: erik;
+            	animation-duration: 1.4s;
+            	animation-timing-function: steps(17,end);
+            	animation-iteration-count: infinite;
+            	animation-direction: alternate;
+            	animation-play-state: paused;
+            	border-radius: 50%;
+            	border: 10px solid #ccc;
+            	display: inline-block;
+            	transition: all 0.5s;
+            }
+
+            .my-avatar {
+            	width: 25rem;
+            	height: 25rem;
+            	background: url('images/kiki.jpg') no-repeat;
+            	background-size: 100%;
+            	background-position: 0 -50px;
+            	border-radius: 50%;
+            	border: 0.9rem solid #ccc;
+            	display: inline-block;
+            	animation: my-avatar 1s ease-in-out;
+            	position: relative;
+            	margin-top: 15rem ;
+            }
+
+            .word {
+            	font-size: 5rem;
+            	color: #fff;
+            	font-weight: 800;
+            }
+
+            .down-to-up {
+            	position: relative;
+            	animation: right-slide 1s;
+             }
+
+             .word .m-text {
+             	position: relative;
+             }
+
+            .left-slide {
+            	animation: left-slide 1s ease-in-out;
+            }
+
+            .right-slide {
+            	animation: right-slide 1s ease-in-out;
+            }
+
+             /* css animation */
+            @keyframes erik
+            {
+            	0% {background-position: 0 0;}
+            	100% {background-position: 0 -8160px}
+            }
+
+            @keyframes my-avatar
+            {
+            	0% {opacity: 0.1; top: -6rem;}
+            	100% {opacity: 1; top: 0;}
+            }
+
+            @keyframes down-to-up
+            {
+            	0% {opacity: 0.1; top: 5rem;}
+            	100% {opacity: 1; top: 0;}
+            }
+
+            @keyframes left-slide
+            {
+            	0% {opacity: 0; left: -30rem;}
+            	100% {opacity: 1; left: 0;}
+            }
+
+            @keyframes right-slide
+            {
+            	0% {opacity: 0; left: 30rem;}
+            	100% {opacity: 1; left: 0;}
+            }
+
+            /* media query */
+            @media screen and (max-width: 400px) {
+            	html,body {
+            		font-size: 50%;
+            	}
+
+            	.my-avatar {
+            		margin-top: 10rem;
+            		width: 15rem;
+            		height: 15rem;
+            	}
+
+            	.word {
+            		font-size: 3.5rem;
+            	}
+            }
+        </style>
+    </head>
+<body>
+	<section class="wrap">
+		<div class="my-avatar">
+    </div>
+   <div class="word">
+   		<p class="m-text left-slide">博客与简历</p>
+   		<p class="m-text right-slide">Talk Is Cheap, Show Me The Code </p>
+   </div>
+	</section>
+</body>
+</html>
