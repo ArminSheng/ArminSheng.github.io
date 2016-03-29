@@ -158,16 +158,55 @@
             font-size: 3rem;
             font-weight: 800;
             color: #fff;
-            display: block;
-            width: 100%;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
             margin-bottom: 20px;
             animation: my-avatar 1s ease-in-out;
         }
+
+        .button-next {
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            right: 8rem;
+            width: 2rem;
+            height: 2rem;
+            font-size: 4rem;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .button-next:nth-child(2) {
+            top: 60% !important;
+        }
+
+        input.button-next {
+
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+
         .button-white {
             color: #fff;
             text-decoration: none;
         }
-        .scroll-container:target {
+
+        #sectionA1:active + #scroll{
+            transform:translateY(-100%);
+            border: 5px;
+        }
+
+        #sectionA2:active + #scroll{
+            transform:translateY(0%);
+        }
+
+
+
+
+        #sectionRadio1:checked ~ #scroll{
             transform:translateY(-100%);
         }
 
@@ -217,6 +256,7 @@
 
         .skill-name {
             margin-right: 2rem;
+            float: left;
         }
 
         .skill-degree {
@@ -262,6 +302,10 @@
     </style>
     </head>
 <body>
+
+    <a class="button-next button-white"  id="sectionA1">  </a>
+    <input class="button-next" id="sectionRadio1" type="radio" />
+    <a class="button-next button-white"  id="sectionA2">  </a>
     <div class="scroll-container" id="scroll">
 	   <section class="wrap st-panel" id="section1">
 	       <div class="my-avatar">
@@ -270,9 +314,9 @@
 		      <p class="m-text left-slide">前端开发</p>
 		      <p class="m-text right-slide">Talk Is Cheap, Show Me The Code </p>
            </div>
-           <div class="next">
-               <a class="button-next button-white" href="#scroll"> NEXT >> </a>
-           </div>
+           <!-- <div class="next"> -->
+
+           <!-- </div> -->
     	</section>
         <section class="st-panel pane-skill" id="section2">
             <article class="skill-container">
