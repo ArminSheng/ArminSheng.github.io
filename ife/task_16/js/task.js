@@ -40,7 +40,7 @@ function addAqiData() {
 
 // TODO: validator
 function validator(str) {
-  var regExp = /\/;
+  // var regExp = /\/;
 }
 
 /**
