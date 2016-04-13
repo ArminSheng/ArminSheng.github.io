@@ -11,11 +11,15 @@ var aqiData = {};
 /**
  * trim操作去除string中的空格
  */
-String.prototype.trim = function() {
-  var str = this;
-  str = str.replace(/\s+/g, '');
-  return str;
+if (String.prototype.trim) {
+  console.log('log');
+  String.prototype.trim = function() {
+    var str = this;
+    str = str.replace(/\s+/g, '');
+    return str;
+  }
 }
+console.log(Number('12.5'));
 
 /**
  * 从用户输入中获取数据，向aqiData中增加一条数据
@@ -33,6 +37,11 @@ function addAqiData() {
 }
 // addAqiData();
 // renderAqiList(aqiData);
+
+// TODO: validator
+function validator(str) {
+  var regExp = /\/;
+}
 
 /**
  * 渲染aqi-table表格
