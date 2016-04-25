@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Task 19</title>
+  <style>
+    .btn-default {
+      background-color: red;
+      color: #fff;
+      /*padding: 10px;*/
+      border: 0;
+      transition: opacity 0.5s linear;
+      transition: transform 0.5s linear;
+      margin: 3px;
+      width: 8px;
+      display: inline-block;
+    }
+
+    .container {
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    .left-in {
+      position: relative;
+      animation: left-in 0.5s linear;
+    }
+    .right-in {
+      position: relative;
+      animation: right-in 0.5s linear;
+    }
+
+    @keyframes left-in {
+      0% {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes left-in {
+      0% {
+        transform: translateX(-15px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes right-in {
+      0% {
+        transform: translateX(15px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <input type="number" name="input"></input>
+  <button id="left-in" name="button">左侧入</button>
+  <button id="right-in" name="button">右侧入</button>
+  <button id="left-out" name="button">左侧出</button>
+  <button id="right-out" name="button">右侧出</button>
+  <button id="bubble-sort">排序</button>
+  <div id="cont" class="container"></div>
+
+  <script src="js/task19.js"></script>
+</body>
+</html>

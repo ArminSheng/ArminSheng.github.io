@@ -3,357 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>Erik Smile</title>
-  <style>
-    html, body {
-      padding:0;
-      margin:0;
-      width:100%;
-      height:100%;
-      font-size: 62.5%;
-      font-family: 'Noto Sans', 'Segoe UI', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
-      overflow: hidden;
-    }
+  <title>My Profile</title>
 
-    .wrap {
-      width: 100%;
-      height: 100%;
-      background-color: #67b374;
-      text-align: center;
-    }
-
-    .erik:hover {
-      opacity: 1;
-      animation-play-state: running;
-      transition: all 0.5s;
-    }
-
-    .erik {
-      opacity: 0.5;
-      width: 480px;
-      height: 480px;
-      background-image: url('images/avatar.jpg');
-      background-size: 480px 8160px;
-      background-repeat: no-repeat;
-      animation-name: erik;
-      animation-duration: 1.4s;
-      animation-timing-function: steps(17,end);
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      animation-play-state: paused;
-      border-radius: 50%;
-      border: 10px solid #ccc;
-      display: inline-block;
-      transition: all 0.5s;
-    }
-
-    .my-avatar {
-      width: 25rem;
-      height: 25rem;
-      background: url('../images/kiki.jpg') no-repeat;
-      background-size: 100%;
-      background-position: 0 -50px;
-      border-radius: 50%;
-      border: 0.9rem solid #ccc;
-      display: inline-block;
-      animation: my-avatar 1s ease-in-out;
-      position: relative;
-      margin-top: 15rem ;
-    }
-
-    .word {
-      font-size: 5rem;
-      color: #fff;
-      font-weight: 800;
-    }
-
-    .down-to-up {
-      position: relative;
-      animation: right-slide 1s;
-     }
-
-     .word .m-text {
-      position: relative;
-     }
-
-    .left-slide {
-      animation: left-slide 1s ease-in-out;
-    }
-
-    .right-slide {
-      animation: right-slide 1s ease-in-out;
-    }
-
-     /* css animation */
-    @keyframes erik
-    {
-      0% {background-position: 0 0;}
-      100% {background-position: 0 -8160px}
-    }
-
-    @keyframes my-avatar
-    {
-      0% {opacity: 0.1; top: -6rem;}
-      100% {opacity: 1; top: 0;}
-    }
-
-    @keyframes down-to-up
-    {
-      0% {opacity: 0.1; top: 5rem;}
-      100% {opacity: 1; top: 0;}
-    }
-
-    @keyframes left-slide
-    {
-      0% {opacity: 0; left: -30rem;}
-      100% {opacity: 1; left: 0;}
-    }
-
-    @keyframes right-slide
-    {
-      0% {opacity: 0; left: 30rem;}
-      100% {opacity: 1; left: 0;}
-    }
-
-    @keyframes widthVisible {
-
-    }
-
-    /* media query */
-    @media screen and (max-width: 400px) {
-      html,body {
-        font-size: 50%;
-      }
-
-      .my-avatar {
-        margin-top: 10rem;
-        width: 15rem;
-        height: 15rem;
-      }
-
-      .word {
-        font-size: 3.5rem;
-      }
-    }
-
-    .st-panel , .scroll-container{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform: translate3d(0, 0, 0);
-        transition: all 1s ease-in-out;
-    }
-
-    .scroll-container {
-        top: 0;
-        left: 0;
-        transform: translate3d(0, 0, 0);
-        transition: all 1s ease-in-out;
-    }
-
-    .next {
-        position: relative;
-        bottom: 0;
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 800;
-        color: #fff;
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        margin-bottom: 20px;
-        animation: my-avatar 1s ease-in-out;
-    }
-
-    .button-next {
-        position: absolute;
-        z-index: 9;
-        top: 50%;
-        right: 8rem;
-        width: 2rem;
-        height: 2rem;
-        font-size: 4rem;
-        border: 1px solid #ccc;
-        background-color: #fff;
-        border-radius: 50%;
-    }
-
-    .button-next:nth-child(2) {
-        top: 60% !important;
-    }
-
-    input.button-next {
-
-        z-index: 10;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .button-white {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    #sectionA1:active + #scroll{
-        transform:translateY(-100%);
-        border: 5px;
-    }
-
-    #sectionA2:active + #scroll{
-        transform:translateY(0%);
-    }
-
-    #sectionRadio1:checked ~ #scroll{
-        transform:translateY(-100%);
-    }
-
-    .skill-container {
-        width: 100%;
-        font-size: 3rem;
-    }
-    .pane-skill {
-        display: flex;
-        align-items: center;
-        -webkit-align-items: center;
-        text-align: center;
-    }
-
-    .font-20 {
-        font-size: 2rem;
-    }
-    .font-25 {
-        font-size: 2.5rem;
-    }
-    .font-15 {
-        font-size: 1.5rem;
-    }
-    .font-30 {
-        font-size: 3rem;
-    }
-    .font-35 {
-        font-size: 3.5rem;
-    }
-
-    .container p {
-        margin: 0;
-        margin-bottom: 1.5rem;
-    }
-
-    .container {
-        max-width: 85%;
-        margin: 0 auto;
-    }
-
-    .skill-p {
-        width: 60%;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        text-align: right;
-    }
-
-    .skill-name {
-        margin-right: 2rem;
-        float: left;
-    }
-
-    .skill-degree {
-        background-color: #67b374;
-        height: 1.5rem;
-        display: inline-block;
-        text-align: right;
-        transition: all 1s ease-in-out;
-        animation: widthVisible 1s ease-in-out;
-    }
-
-    .degree-75 {
-        width: 75%;
-    }
-    .degree-70 {
-        width: 70%;
-    }
-    .degree-65 {
-        width: 65%;
-    }
-    .degree-60 {
-        width: 60%;
-    }
-    .degree-50 {
-        width: 50%;
-    }
-    .degree-55 {
-        width: 55%;
-    }
-    .degree-40 {
-        width: 40%;
-    }
-    .degree-30 {
-        width: 30%;
-    }
-    .degree-20 {
-        width: 20%;
-    }
-
-    .skill-title {
-        color: #67b374;
-    }
-  </style>
+  <!-- css part -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<a class="button-next button-white"  id="sectionA1">  </a>
-<input class="button-next" id="sectionRadio1" type="radio" />
-<a class="button-next button-white"  id="sectionA2">  </a>
-<div class="scroll-container" id="scroll">
-<section class="wrap st-panel" id="section1">
-   <div class="my-avatar">
-     </div>
-     <div class="word">
-    <p class="m-text left-slide">前端开发</p>
-    <p class="m-text right-slide">Talk Is Cheap, Show Me The Code </p>
-     </div>
-     <!-- <div class="next"> -->
-
-     <!-- </div> -->
+  <input class="input-button-next" id="sectionRadio1" checked type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA1">  </a>
+  <input class="input-button-next" id="sectionRadio2" type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA2">  </a>
+  <input class="input-button-next" id="sectionRadio3" type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA3">  </a>
+  <div class="scroll-container" id="scroll">
+  <section class="wrap-gradient st-panel" id="section1">
+    <div class="my-avatar">
+    </div>
+    <div class="word">
+      <p class="m-text left-slide">盛志敏 · 前端工程师</p>
+      <p class="m-text right-slide">Web Front End Engineer</p>
+    </div>
+<!-- <div class="next"></div> -->
 </section>
   <section class="st-panel pane-skill" id="section2">
-      <article class="skill-container">
-          <h2 class="font-35 skill-title">前端技能  Professions</h2>
-          <div class="container">
-              <p class="skill-p">
-                  <span class="font-30 skill-name">HTML</span>
-                  <span class="skill-degree degree-60"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-30 skill-name">CSS3</span>
-                  <span class="skill-degree degree-60"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-30 skill-name">Javascript</span>
-                  <span class="skill-degree degree-50"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-25 skill-name">jQuery</span>
-                  <span class="skill-degree degree-50"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-25 skill-name">AngularJs</span>
-                  <span class="skill-degree degree-40"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-20 skill-name">gulp</span>
-                  <span class="skill-degree degree-20"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-30 skill-name">Bootstrap</span>
-                  <span class="skill-degree degree-55"></span>
-              </p>
-              <p class="skill-p">
-                  <span class="font-30 skill-name">Git</span>
-                  <span class="skill-degree degree-40"></span>
-              </p>
-          </div>
-      </article>
+    <article class="skill-container">
+      <h2 class="font-35 skill-title">前端技能  Professions</h2>
+      <div class="container">
+        <p class="skill-p">
+          <span class="font-30 skill-name">HTML</span>
+          <span class="skill-degree degree-55"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-30 skill-name">CSS3</span>
+          <span class="skill-degree degree-60"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-30 skill-name">Sass</span>
+          <span class="skill-degree degree-40"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-30 skill-name">Javascript</span>
+          <span class="skill-degree degree-50"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-25 skill-name">jQuery</span>
+          <span class="skill-degree degree-50"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-25 skill-name">AngularJs</span>
+          <span class="skill-degree degree-40"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-20 skill-name">Gulp, NPM, Bower</span>
+          <span class="skill-degree degree-30"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-30 skill-name">Bootstrap</span>
+          <span class="skill-degree degree-55"></span>
+        </p>
+        <p class="skill-p">
+          <span class="font-30 skill-name">Git</span>
+          <span class="skill-degree degree-40"></span>
+        </p>
+      </div>
+    </article>
+  </section>
+  <section class="st-panel pane-skill" id="section3">
+    test
   </section>
 </div>
+
+<script src="js/index.js"></script>
 </body>
 </html>

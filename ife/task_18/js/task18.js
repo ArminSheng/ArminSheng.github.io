@@ -7,23 +7,21 @@ var container = document.getElementById('cont');
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', function() {
     input.value = input.value.trim();
-    console.log(isNaN(input.value));
     if (this.id === 'left-in') {
       if (input.value == '' || isNaN(input.value)) {
         alert('请输入数字');
         return false;
       }
-      var node = createBtn(input.value);
+      var node = createNode(input.value);
       node.className = 'btn-default left-in';
       addChild(node);
-      // console.log(container);
 
     } else if (this.id === 'right-in') {
       if (input.value == '' || isNaN(input.value)) {
         alert('请输入数字');
         return false;
       }
-      var node = createBtn(input.value);
+      var node = createNode(input.value);
       node.className = 'btn-default right-in';
       addChild(node, true);
     } else if (this.id === 'left-out') {
@@ -35,7 +33,7 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 /* create a node and add event listener to it */
-function createBtn(value) {
+function createNode(value) {
   var btn = document.createElement('button');
   btn.innerHTML = value;
   btn.className = 'btn-default';
@@ -47,7 +45,7 @@ function createBtn(value) {
 
 /*
  * Add a child to container
- * append a child as the lastest node of the contaniner: type = true
+ * @params {bool} append a child as the lastest node of the contaniner: type = true
  * default: insert a child before the first child of the container
  */
 function addChild(node, type) {

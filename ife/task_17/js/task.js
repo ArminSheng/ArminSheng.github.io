@@ -154,7 +154,6 @@ function convertData(type, data) {
         start += month[k];
       }
       end = start + month[m];
-      console.log(start, m, end);
       var weekIdx = 0;
       for (var j = start; j < end; j++) {
         weekTemp.push(days[j]);
@@ -162,7 +161,7 @@ function convertData(type, data) {
 
           week.push(weekTemp);
           weekIdx++;
-          console.log(weekTemp);
+
           // set returnData object
           returnData['2016-'+m+'月第'+weekIdx+'周'] = avg(weekTemp);
 
@@ -171,10 +170,6 @@ function convertData(type, data) {
         }
       }
     }
-    console.log(returnData);
-    // var date = new Date('2016-01-08');
-    // var dayOfWeek = date.toString().substr(0, 3);
-    // console.log(dayOfWeek);
   } else {
     // default by day
     returnData = false;
@@ -212,11 +207,9 @@ function initGraTimeForm() {
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].name && radios[i].name === 'gra-time') {
       radios[i].addEventListener('click', function () {
-        // console.log('click');
         pageState.nowGraTime = this.value;
         graTimeChange();
       });
-      // console.log(radios[i].value);
     }
   }
 }
@@ -237,7 +230,6 @@ function initCitySelector() {
 
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
   selecter.addEventListener('change', function() {
-    // console.log(this.selectedIndex);
     pageState.nowSelectCity = this.selectedIndex;
     citySelectChange();
   });
