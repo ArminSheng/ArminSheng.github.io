@@ -133,7 +133,7 @@ html,body {
   top: 0;
   left: 0;
   transform: translate3d(0, 0, 0);
-  transition: all 1s ease-in-out;
+  transition: all 1s ease-out;
 }
 
 .next {
@@ -176,7 +176,7 @@ input.input-button-next {
   cursor: pointer;
 }
 
-.button-next:nth-child(4), input.input-button-next:nth-child(3){
+#sectionRadio2, #sectionA2 {
   top: 45% !important;
 }
 
@@ -254,4 +254,34 @@ input.input-button-next {
 
 .skill-title {
   color: #67b374;
+}
+
+/* lang select */
+.lang-wrap {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1;
+}
+
+.lang-btn {
+  float: left;
+  text-decoration: none;
+  outline: none;
+  padding: 0.5rem 0.8rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: #67b374;
+  transition: all 0.5s;
+}
+
+.lang-btn.active {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #22B573;
+}
+
+.lang-btn:hover {
+  color: #000;
 }
