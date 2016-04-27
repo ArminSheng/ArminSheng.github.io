@@ -4,14 +4,15 @@
   background: -moz-linear-gradient(top, #67b374, #22B573);
   text-align: center;
   font-size: 62.5%;
+  color: #fff;
 }
 
 .my-avatar {
   width: 16rem;
   height: 16rem;
-  background: url('../images/avatar.jpg') no-repeat;
-  background-size: 100%;
-  background-position: 0 -50px;
+  background: url('../images/avatar.png') no-repeat;
+  background-size: cover;
+  /*background-position: 0 -50px;*/
   border-radius: 50%;
   border: 0.9rem solid #ccc;
   display: inline-block;
@@ -106,19 +107,19 @@
 
 /* media query */
 @media screen and (max-width: 400px) {
-html,body {
-  font-size: 50%;
-}
+  html,body {
+    font-size: 50%;
+  }
 
-.my-avatar {
-  margin-top: 10rem;
-  width: 15rem;
-  height: 15rem;
-}
+  .my-avatar {
+    margin-top: 10rem;
+    width: 15rem;
+    height: 15rem;
+  }
 
-.word {
-  font-size: 3.5rem;
-}
+  .word {
+    font-size: 3.5rem;
+  }
 }
 
 .st-panel , .scroll-container{
@@ -214,6 +215,11 @@ input.input-button-next {
   width: 100%;
   font-size: 3rem;
 }
+
+.white {
+  color: #fff;
+}
+
 .pane-skill {
   display: flex;
   align-items: center;
@@ -284,4 +290,36 @@ input.input-button-next {
 
 .lang-btn:hover {
   color: #000;
+}
+
+.intern-company-list {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.intern-company-title {
+  color: inherit;
+  font-size: 2rem;
+  margin: 0.2rem 0;
+}
+
+.sub-title {
+  font-size: 1.6rem;
+  color: #ddd;
+}
+
+.intern-company-brief {
+  margin: 1rem 0;
+}
+
+.tech-label {
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ccc;
+  background: #414748;
+  margin: 0.5rem;
+  /*background: -webkit-linear-gradient(top, #432e4f, #d0648a);
+  background: -moz-linear-gradient(top, #432e4f, #d0648a);
+  background: -ms-linear-gradient(top, #432e4f, #d0648a);*/
 }
