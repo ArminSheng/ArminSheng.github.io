@@ -13,7 +13,7 @@
   }
 
   // detect available wheel event
-  support = "onwheel" in document.createElement("div") ? "wheel" : // 各个厂商的高版本浏览器都支持"wheel"
+  support = "onwheel" in document.createElement("div") ? "wheel" : // 浏览器都支持"wheel"
             document.onmousewheel !== undefined ? "mousewheel" : // Webkit 和 IE一定支持"mousewheel"
             "DOMMouseScroll"; // 低版本firefox
 
@@ -63,3 +63,34 @@
 
 })(window,document);
 
+var current = 0,
+    isScroll = false;
+
+function pageScroll(e, len, indicators) {
+  // detect whether the page is on scrolling
+  if (isScroll) {
+    return;
+  }else {
+    isScroll = true;
+  }
+
+  if (e.deltaY < 0) {
+    current--;
+    current = current < 0 ? 0 : current;
+    currentChange(current);
+  } else {
+    current++;
+    current = (current <= len-1) ? current : len -1;
+    currentChange(current);
+  }
+
+  e.preventDefault();
+
+}
+
+function currentChange(current) {
+  indicators[current].checked = true;
+  setTimeout(function() {
+    isScroll = false;
+  }, 1100);
+}
