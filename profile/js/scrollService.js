@@ -64,7 +64,8 @@
 })(window,document);
 
 var current = 0,
-    isScroll = false;
+    isScroll = false,
+    downing = false;
 
 function pageScroll(e, len, indicators) {
   // detect whether the page is on scrolling
@@ -74,11 +75,21 @@ function pageScroll(e, len, indicators) {
     isScroll = true;
   }
 
-  if (e.deltaY < 0) {
+  downing = e.deltaY > 0 ? true : false;
+  if (!downing) {
+    if (current-1 < 0) {
+      isScroll = false;
+      return;
+    }
+
     current--;
     current = current < 0 ? 0 : current;
     currentChange(current);
   } else {
+    if (current > len) {
+        return;
+    }
+
     current++;
     current = (current <= len-1) ? current : len -1;
     currentChange(current);
@@ -90,6 +101,7 @@ function pageScroll(e, len, indicators) {
 
 function currentChange(current) {
   indicators[current].checked = true;
+
   setTimeout(function() {
     isScroll = false;
   }, 1100);
