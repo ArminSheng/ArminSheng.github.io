@@ -1,0 +1,58 @@
+html, body {
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  font-size: 62.5%;
+  font-family: 'Noto Sans', 'Segoe UI', 'Microsoft Yahei', 'Microsoft Jhenghei', sans-serif;
+  overflow: hidden;
+}
+
+a, button, input, a:focus, button:focus, input:focus {
+  outline: none;
+}
+
+ .font-20 {
+  font-size: 2rem;
+}
+.font-25 {
+  font-size: 2.5rem;
+}
+.font-15 {
+  font-size: 1.5rem;
+}
+.font-30 {
+  font-size: 3rem;
+}
+.font-35 {
+  font-size: 3.5rem;
+}
+
+.degree-75 {
+  width: 75%;
+}
+.degree-70 {
+  width: 70%;
+}
+.degree-65 {
+  width: 65%;
+}
+.degree-60 {
+  width: 60%;
+}
+.degree-50 {
+  width: 50%;
+}
+.degree-55 {
+  width: 55%;
+}
+.degree-40 {
+  width: 40%;
+}
+.degree-30 {
+  width: 30%;
+}
+.degree-20 {
+  width: 20%;
+}
+

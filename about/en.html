@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title>ArminSheng's CV</title>
+  <link rel="shortcut icon" href="images/avatar.jpg">
+  <!-- css part -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- lang select -->
+  <div class="lang-wrap">
+    <a class="lang-btn" href="index.html">中</a><a class="lang-btn active">En</a>
+  </div>
+
+  <!-- navigator -->
+  <input class="input-button-next" id="sectionRadio1" checked type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA1">  </a>
+  <input class="input-button-next" id="sectionRadio2" type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA2">  </a>
+  <input class="input-button-next" id="sectionRadio3" type="radio" name="scroll"/>
+  <a class="button-next button-white"  id="sectionA3">  </a>
+
+  <div class="scroll-container" id="scroll">
+    <section class="wrap-gradient st-panel" id="section1" name="section">
+      <div class="my-avatar">
+      </div>
+      <div class="word">
+        <!-- <p class="m-text left-slide">盛志敏 · 前端工程师</p> -->
+        <p class="m-text right-slide">Web Front-End Engineer</p>
+      </div>
+      <!-- <div class="next"></div> -->
+    </section>
+    <section class="st-panel pane-skill" id="section2" name="section">
+      <article class="skill-container">
+        <h2 class="font-35 skill-title">Professions</h2>
+        <div class="container">
+          <p class="skill-p">
+            <span class="font-30 skill-name">HTML</span>
+            <span class="skill-degree degree-55"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-30 skill-name">CSS3</span>
+            <span class="skill-degree degree-60"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-30 skill-name">Sass</span>
+            <span class="skill-degree degree-40"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-30 skill-name">Javascript</span>
+            <span class="skill-degree degree-50"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-25 skill-name">jQuery</span>
+            <span class="skill-degree degree-50"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-25 skill-name">AngularJs</span>
+            <span class="skill-degree degree-40"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-20 skill-name">Gulp, NPM, Bower</span>
+            <span class="skill-degree degree-30"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-30 skill-name">Bootstrap</span>
+            <span class="skill-degree degree-55"></span>
+          </p>
+          <p class="skill-p">
+            <span class="font-30 skill-name">Git</span>
+            <span class="skill-degree degree-40"></span>
+          </p>
+        </div>
+      </article>
+    </section>
+    <section class="st-panel pane-skill wrap-gradient" id="section3" name="section">
+      <div class="skill-container">
+        <h2 class="font-35 white">Internship</h2>
+        <div class="container intern-company-list">
+          <div class="intern-company-wrap">
+            <h4 class="intern-company-title">Shanghai Micopopular Tech · Web Front-End Develop</h4>
+            <p class="sub-title">2016.01 ~ 2016.05</p>
+            <p class="intern-item-title">
+               Project：mmr-APP，It's a HybridApp which separated front and back end,also a SPA
+            </p>
+            <p class="intern-company-brief">
+            Technology:
+              <span class="tech-label">AngularJs</span>
+              <span class="tech-label">Ionic</span>
+              <span class="tech-label">Cordova(PhoneGap)</span>
+            </p>
+            <p class="intern-company-brief">
+              Tools and JS lib： <span class="tech-label">loadash</span><span class="tech-label">Gulp</span><span class="tech-label">Bower</span>
+            </p>
+            <p class="intern-company-brief">
+              We use the promise service of<span class="tech-label">AngularJs</span> to interact with restful API
+            </p>
+            <p class="intern-company-brief">
+              Version control: <span class="tech-label">Git</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<script src="js/scrollService.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
